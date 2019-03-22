@@ -13,7 +13,7 @@ function exec(appName){
    	 return writeFile('./'+appName+'/package.json',newData)
    })
    .then(data=>{
-     return rename('./'+appName+'gitignore','./'+appName+'.gitignore');
+     return rename('./'+appName+'/gitignore','./'+appName+'/.gitignore');
    })
    .then(()=>{
      console.log(`   Project ${chalk.green.bold(appName)} was created successfully!`);
