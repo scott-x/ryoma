@@ -1,4 +1,4 @@
-const { copy, readFile, writeFile} = require('slimz');
+const { copy, readFile, writeFile, rename } = require('slimz');
 const path = require('path');
 var chalk = require('chalk');
 
@@ -13,6 +13,9 @@ function exec(appName){
    	 return writeFile('./'+appName+'/package.json',newData)
    })
    .then(data=>{
+     return rename('./'+appName+'gitignore','./'+appName+'.gitignore');
+   })
+   .then(()=>{
      console.log(`   Project ${chalk.green.bold(appName)} was created successfully!`);
    })
    .catch(err=>{
