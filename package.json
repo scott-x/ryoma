@@ -1,0 +1,23 @@
+{
+  "name": "ryoma",
+  "version": "1.0.0",
+  "description": "A cli tools",
+  "bin": {
+    "cli": "./bin/app.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "co": "^4.6.0",
+    "commander": "^2.11.0",
+    "inquirer": "^6.2.1",
+    "slimz": "^1.0.4"
+  },
+  "keywords": [
+    "scott"
+  ],
+  "author": "Scott Xiong",
+  "license": "ISC"
+}
