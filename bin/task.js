@@ -3,13 +3,13 @@ const path = require('path');
 var chalk = require('chalk');
 
 function exec(appName){
-   const From = path.resolve(__dirname,'../temp/sc-cli');
+   const From = path.resolve(__dirname,'../temp/sc');
    const To   = './'+appName;
    copy(From,To).then(()=>{
     return readFile('./'+appName+'/package.json');
    })
    .then(data=>{
-   	 const newData = data.toString().replace('sc-cli',appName);
+   	 const newData = data.toString().replace('sc',appName);
    	 return writeFile('./'+appName+'/package.json',newData)
    })
    .then(data=>{
