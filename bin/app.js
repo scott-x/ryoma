@@ -10,8 +10,8 @@ inquirer
       {
         type: 'input',
         name: 'type',
-        message: `${chalk.magenta(' Your cli name(default:sc-cli):')}`,
-        default: 'sc-cli'
+        message: `${chalk.magenta(' Your cli name(default:sc):')}`,
+        default: 'sc'
       }
    
   ])
