@@ -13,21 +13,25 @@ inquirer
         message: `${chalk.magenta(' Choose your task: ')}`,
         choices: ['task1','task2'],
         default: 'task1'
-      }
+      },
+      // {
+      //   type: 'input',
+      //   name: 'type',
+      //   message: `${chalk.magenta(' Input Something You Like: ')}`,
+      //   default: 'sth'
+      // }
    
   ])
   .then(answers => {
      switch (answers.type){
         case 'task1':
             //task1
-           console.log('task1') 
+           require('./task').run('xxx')
            break;
         case "task2":
-            //task2
-           console.log('task2') 
+           //task2
+           require('./task').run('xxx') 
            break;      
      }
 
-  }).catch(err=>{
-    console.log(err)
-  });
+  })
